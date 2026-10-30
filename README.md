@@ -13,7 +13,6 @@ and written analysis.
 - `MSCS_634_Lab_5.ipynb`: executed notebook with figures, tables, and interpretation.
 - `results/`: six figures, parameter metrics, comparison tables, and sample assignments.
 - `requirements.txt`: exact package versions used with Python 3.13.2.
-- `build_notebook.py`: regenerates and executes the notebook.
 
 ## Method and results
 Both algorithms use all 13 standardized features. PCA is used only for plotting;
@@ -72,14 +71,14 @@ exhaustive optimum. Ward favors compact groups, and DBSCAN is sensitive to a glo
 radius in this feature space. Silhouette also favors compact separated groups.
 
 ## Reproduce
-Create a Python environment, install dependencies, then regenerate the notebook:
+Create a Python environment and install the dependencies:
 
 ```bash
 python -m pip install -r requirements.txt
-python build_notebook.py
 ```
 
-Alternatively, open the notebook in Jupyter or VS Code and run all cells in order.
+Open `MSCS_634_Lab_5.ipynb` in Jupyter or VS Code, select your Python environment,
+and run all cells in order. Edit the notebook cells directly when making changes.
 Install `jupyterlab` separately if desired. The Wine dataset ships with scikit-learn;
 no external data download is required. Re-running overwrites generated outputs in
 `results/`. PCA uses full SVD, and the clustering runs are deterministic for a fixed
